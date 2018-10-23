@@ -1,15 +1,15 @@
 CREATE TABLE EMPLOYEE 
 ( Fname           VARCHAR(10)   NOT NULL, 
   Minit           CHAR,
-  Lname           VARCHAR(20),      NOT NULL, 
-  Ssn             CHAR(9),          NOT NULL,   
+  Lname           VARCHAR(20)      NOT NULL, 
+  Ssn             CHAR(9)          NOT NULL,   
   Bdate           DATE,        
   Address         VARCHAR(30),    
   Sex             CHAR(1),     
   Salary          DECIMAL(5),  
   Super_ssn       CHAR(9),
   Dno             INT               NOT NULL, 
-PRMARY KEY   (Ssn),
+PRIMARY KEY   (Ssn),
 FOREIGN KEY  (Super_ssn) REFERENCES EMPLOYEE(Ssn),
 FOREIGN KEY  (Dno) REFERENCES DEPARTMENT(d_number) ); 
 
